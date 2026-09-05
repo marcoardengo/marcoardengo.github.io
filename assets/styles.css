@@ -1,14 +1,15 @@
 :root {
-  --bg: #f4f3ef;
-  --text: #171715;
-  --muted: #6e6d68;
-  --line: rgba(23, 23, 21, 0.16);
-  --white: #ffffff;
+  --bg: #f6f6f2;
+  --text: #17211c;
+  --muted: #68716b;
+  --line: rgba(23, 33, 28, 0.15);
+
+  --green: #234c3a;
+  --green-light: #dfe9e3;
 
   --container: 1280px;
   --side-space: 5vw;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -71,6 +72,7 @@ img {
   font-weight: 600;
   font-size: 1.05rem;
   letter-spacing: -0.04em;
+  color: var(--green);
 }
 
 .nav-links {
@@ -87,7 +89,7 @@ img {
 }
 
 .nav-links a:hover {
-  color: var(--text);
+  color: var(--green);
 }
 
 
@@ -182,7 +184,7 @@ img {
 
   padding: 0 21px;
 
-  background: var(--text);
+  background: var(--green);
   color: var(--bg);
 }
 
@@ -224,13 +226,9 @@ img {
 
 .section-number {
   display: block;
-
   margin-bottom: 12px;
-
   font-size: 0.7rem;
-
-  color: var(--muted);
-
+  color: var(--green);
   letter-spacing: 0.08em;
 }
 
@@ -445,7 +443,8 @@ img {
 }
 
 .contact-links a:hover {
-  opacity: 0.55;
+  color: var(--green);
+  opacity: 1;
 }
 
 
