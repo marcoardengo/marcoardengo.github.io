@@ -139,107 +139,131 @@ img {
 
 
 /* =================================
-   HERO
+   HERO FULL WIDTH
 ================================= */
 
 .hero {
-  padding: 90px 0 135px;
+  width: 100%;
+  min-height: calc(100vh - 85px);
+
+  padding: 0;
+
+  display: flex;
+  align-items: stretch;
 }
 
 .hero-grid {
+  width: 100%;
+
   display: grid;
 
   grid-template-columns:
-    minmax(0, 1.35fr)
-    minmax(280px, 0.65fr);
+    minmax(0, 1.15fr)
+    minmax(420px, 0.85fr);
 
-  gap: clamp(60px, 8vw, 120px);
-
-  align-items: end;
+  align-items: stretch;
 }
+
+
+/* LEFT SIDE */
+
+.hero-copy {
+  padding:
+    clamp(80px, 9vw, 150px)
+    clamp(50px, 7vw, 120px);
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+/* NAME */
 
 .hero h1 {
   font-family: "Poppins", sans-serif;
 
   font-size: clamp(
     5.5rem,
-    10vw,
-    9.4rem
+    9vw,
+    9.5rem
   );
 
   font-weight: 600;
 
-  line-height: 0.83;
+  line-height: 0.84;
 
   letter-spacing: -0.075em;
+
+  margin-bottom: 55px;
 }
 
-.hero-info {
-  max-width: 430px;
-  padding-bottom: 4px;
-}
+
+/* ROLE */
 
 .hero-role {
   font-family: "Poppins", sans-serif;
 
-  font-size: 1.05rem;
-  line-height: 1.4;
+  font-size: 1.08rem;
 
   font-weight: 500;
 
-  margin-bottom: 24px;
+  line-height: 1.4;
+
+  margin-bottom: 22px;
 }
 
-.hero-description {
-  max-width: 410px;
 
-  font-size: 0.96rem;
-  line-height: 1.75;
+/* DESCRIPTION */
+
+.hero-description {
+  max-width: 470px;
+
+  font-size: 0.98rem;
+
+  line-height: 1.8;
 
   color: var(--muted);
 
-  margin-bottom: 34px;
+  margin-bottom: 38px;
 }
+
+
+/* BUTTONS */
 
 .hero-buttons {
   display: flex;
-  align-items: center;
-  gap: 22px;
-}
-
-.button {
-  font-size: 0.84rem;
-
-  transition:
-    opacity 180ms ease,
-    transform 180ms ease;
-}
-
-.button:hover {
-  opacity: 0.65;
-}
-
-.button-primary {
-  display: inline-flex;
 
   align-items: center;
-  justify-content: center;
 
-  min-height: 44px;
-
-  padding: 0 21px;
-
-  background: var(--green);
-  color: var(--bg);
+  gap: 24px;
 }
 
-.button-primary:hover {
-  transform: translateY(-1px);
+
+/* RIGHT SIDE / PHOTO */
+
+.hero-photo {
+  width: 100%;
+  height: 100%;
+
+  min-height: calc(100vh - 85px);
+
+  overflow: hidden;
+
+  background: #e6e5df;
 }
 
-.button-secondary {
-  border-bottom: 1px solid var(--text);
-  padding-bottom: 2px;
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  display: block;
 }
 
 
@@ -598,6 +622,38 @@ footer {
     align-items: flex-start;
     flex-direction: column;
     gap: 8px;
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    padding:
+      80px
+      6vw;
+  }
+
+  .hero-photo {
+    min-height: 70vh;
+  }
+
+  .hero h1 {
+    font-size: clamp(
+      4.5rem,
+      17vw,
+      7rem
+    );
+
+    margin-bottom: 45px;
   }
 
 }
