@@ -57,6 +57,7 @@ img {
 
 .navbar {
   padding: 20px 0;
+
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -66,7 +67,20 @@ img {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 
-  border-bottom: 1px solid transparent;
+  transition:
+    background-color 0.35s ease,
+    padding 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.navbar.scrolled {
+  background: #234c3a;
+  padding: 15px 0;
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .nav-inner {
@@ -83,6 +97,10 @@ img {
   color: var(--green);
 }
 
+.navbar.scrolled .logo {
+  color: #f6f6f2;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -96,8 +114,12 @@ img {
   transition: color 180ms ease;
 }
 
+.navbar.scrolled .nav-links a {
+  color: rgba(246, 246, 242, 0.82);
+}
+
 .nav-links a:hover {
-  color: var(--green);
+  color: #ffffff;
 }
 
 
