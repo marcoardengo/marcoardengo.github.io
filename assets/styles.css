@@ -118,6 +118,9 @@ img {
 }
 
 .navbar.scrolled .logo {
+  font-size: 0.82rem;
+  line-height: 0.92;
+  
   color: #f6f6f2;
 }
 
