@@ -94,7 +94,7 @@ img {
   display: inline-block;
   
   font-family: "Poppins", sans-serif;
-  font-size: 1.65rem;
+  font-size: 1.55rem;
   font-weight: 600;
   
   line-height: 1;
@@ -112,7 +112,7 @@ img {
 }
 
 .navbar.scrolled .logo {
-  font-size: 1.25rem;  
+  font-size: 1.20rem;  
   color: #f6f6f2;
 }
 
