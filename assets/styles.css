@@ -271,6 +271,8 @@ img {
 
   position: relative;
   z-index: 2;
+
+  transform: translateX(-100px);
 }
 
 
