@@ -251,9 +251,9 @@ img {
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 
-  padding: 60px 5vw 60px 20px;
+  padding: 60px 5vw 60px 0;
 
   overflow: visible;
 }
