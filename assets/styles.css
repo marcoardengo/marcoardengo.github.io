@@ -274,7 +274,7 @@ img {
   background: var(--green);
 
   clip-path: polygon(
-    40% 0,
+    30% 0,
     100% 0,
     100% 100%,
     0 100%
