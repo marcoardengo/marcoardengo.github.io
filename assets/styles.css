@@ -258,8 +258,30 @@ img {
   overflow: visible;
 }
 
+/* DIAGONAL GREEN BAND */
+.hero-photo::before {
+  content: "";
 
-/* PORTRAIT */
+  position: absolute;
+
+  top: -20%;
+  left: -8%;
+
+  width: 180px;
+  height: 140%;
+
+  background: var(--green);
+
+  transform: rotate(12deg);
+  transform-origin: center;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+
+/* PHOTO */
 
 .hero-portrait {
   display: block;
@@ -272,7 +294,7 @@ img {
   position: relative;
   z-index: 2;
 
-  transform: translateX(-150px);
+  transform: translateX(-100px);
 }
 
 
