@@ -251,29 +251,34 @@ img {
 
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 
-  padding: 60px 5vw 60px 0;
+  padding: 60px 5vw 60px 20px;
 
-  overflow: visible;
+  overflow: hidden;
 }
 
-/* DIAGONAL GREEN BAND */
+/* DARK GREEN RIGHT PANEL */
+
 .hero-photo::before {
   content: "";
 
   position: absolute;
 
-  top: -20%;
-  left: -8%;
+  top: 0;
+  right: 0;
+  bottom: 0;
 
-  width: 180px;
-  height: 140%;
+  width: 115%;
 
   background: var(--green);
 
-  transform: rotate(12deg);
-  transform-origin: center;
+  clip-path: polygon(
+    40% 0,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
 
   z-index: 1;
 
