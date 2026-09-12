@@ -1,2 +1,4 @@
 # marcoardengo.github.io
-My professional website
+Welcome to my professional website.
+
+Here you can find Information about me, my education, research projects and events I Will partecipate.
