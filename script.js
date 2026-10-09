@@ -230,17 +230,7 @@ if (link.closest(".desktop-nav")) {
 
     });
 
-    // Highlight Contact at the bottom.
-
-    if (
-      window.innerHeight + window.scrollY >=
-      document.documentElement.scrollHeight - 5
-    ) {
-
-      currentSection = "contact";
-
-    }
-
+     
 let activeLink = null;
 
 navLinks.forEach(link => {
