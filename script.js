@@ -39,7 +39,7 @@ function moveIndicator(activeLink) {
 
   const linkRect = activeLink.getBoundingClientRect();
 
-  const left = linkRect.left - navRect.left;
+  const left = linkRect.left - navRect.left + nav.scrollLeft;
 
   indicator.style.width = `${linkRect.width}px`;
 
