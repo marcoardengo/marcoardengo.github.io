@@ -113,14 +113,45 @@ img {
   color: var(--red);
 }
 
-.desktop-nav a.active::after {
-  content: "";
+.desktop-nav a:hover,
+.desktop-nav a.active {
+  color: var(--red);
+}
+
+/* SLIDING NAVIGATION INDICATOR */
+
+.desktop-nav {
+  position: relative;
+}
+
+.desktop-nav a::after {
+  display: none;
+}
+
+.nav-indicator {
   position: absolute;
   bottom: 0;
   left: 0;
-  right: 0;
+
   height: 3px;
-  background: var(--red);
+  width: 0;
+
+  background-color: var(--red);
+  border-radius: 2px;
+
+  transform: translateX(0);
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    width 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-indicator {
+    transition: none;
+  }
 }
 
 /* ==========================================
