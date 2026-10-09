@@ -15,6 +15,39 @@ document.addEventListener("DOMContentLoaded", () => {
     '.desktop-nav a[href^="#"]'
   );
 
+/* ========================================
+   SLIDING NAVIGATION INDICATOR
+   ======================================== */
+
+const nav = document.querySelector(".desktop-nav");
+
+const indicator = document.createElement("span");
+
+indicator.className = "nav-indicator";
+
+indicator.setAttribute("aria-hidden", "true");
+
+if (nav) {
+  nav.appendChild(indicator);
+}
+
+function moveIndicator(activeLink) {
+
+  if (!nav || !activeLink) return;
+
+  const navRect = nav.getBoundingClientRect();
+
+  const linkRect = activeLink.getBoundingClientRect();
+
+  const left = linkRect.left - navRect.left;
+
+  indicator.style.width = `${linkRect.width}px`;
+
+  indicator.style.transform = `translateX(${left}px)`;
+
+}
+
+
   const scrollLinks = document.querySelectorAll(
     'a[href^="#"]:not([href="#"])'
   );
@@ -105,6 +138,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     link.addEventListener("click", event => {
 
+      // Sposta immediatamente la linea sulla voce cliccata
+if (link.closest(".desktop-nav")) {
+
+  navLinks.forEach(navLink => {
+    navLink.classList.remove("active");
+    navLink.removeAttribute("aria-current");
+  });
+
+  link.classList.add("active");
+  link.setAttribute("aria-current", "location");
+
+  moveIndicator(link);
+
+}      
       const targetId = link.getAttribute("href");
 
       const target = document.getElementById(
@@ -185,25 +232,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    navLinks.forEach(link => {
+let activeLink = null;
 
-      const isActive =
-        link.getAttribute("href") ===
-        "#" + currentSection;
+navLinks.forEach(link => {
 
-      link.classList.toggle("active", isActive);
+  const isActive =
+    link.getAttribute("href") ===
+    "#" + currentSection;
 
-      if (isActive) {
+  link.classList.toggle("active", isActive);
 
-        link.setAttribute("aria-current", "location");
+  if (isActive) {
 
-      } else {
+    activeLink = link;
 
-        link.removeAttribute("aria-current");
+    link.setAttribute("aria-current", "location");
 
-      }
+  } else {
 
-    });
+    link.removeAttribute("aria-current");
+
+  }
+
+});
+
+// Sposta la linea rossa sotto la voce attiva
+moveIndicator(activeLink);
+
+
+
+     
 
   }
 
