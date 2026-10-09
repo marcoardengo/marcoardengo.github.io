@@ -57,6 +57,7 @@ function moveIndicator(activeLink) {
   );
 
   let animationFrame = null;
+   let isAutoScrolling = false;
 
 
   /* ========================================
@@ -83,6 +84,7 @@ function moveIndicator(activeLink) {
     }
 
     const startPosition = window.scrollY;
+     isAutoScrolling = true;
 
     const maxScroll =
       document.documentElement.scrollHeight -
@@ -120,6 +122,10 @@ function moveIndicator(activeLink) {
       } else {
 
         animationFrame = null;
+
+         isAutoScrolling = false;
+
+         updateActiveMenu();
 
       }
 
@@ -180,6 +186,7 @@ if (link.closest(".desktop-nav")) {
       ) {
 
         window.scrollTo(0, targetPosition);
+         updateActiveMenu()
 
       } else {
 
@@ -201,6 +208,8 @@ if (link.closest(".desktop-nav")) {
      ======================================== */
 
   function updateActiveMenu() {
+
+     if (isAutoScrolling) return;
 
     let currentSection = "home";
 
