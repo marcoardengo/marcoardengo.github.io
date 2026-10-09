@@ -544,3 +544,53 @@ img {
   }
 
 }
+
+/* ==========================================
+   HERO REFINEMENT — DESKTOP
+   ========================================== */
+
+@media (min-width: 1101px) {
+
+  .hero {
+    min-height: 470px;
+    grid-template-columns: 46% 54%;
+  }
+
+  .hero-content {
+    padding: 45px 45px 45px 60px;
+  }
+
+  .hero-content-inner {
+    max-width: 620px;
+  }
+
+  .hero h1 {
+    font-size: clamp(46px, 4.4vw, 68px);
+    letter-spacing: -0.055em;
+  }
+
+  .hero-role {
+    margin-top: 8px;
+    font-size: 25px;
+  }
+
+  .hero-description {
+    margin-top: 18px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .hero-actions {
+    margin-top: 24px;
+  }
+
+  .hero-visual {
+    min-height: 470px;
+  }
+
+  .hero-visual img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+}
