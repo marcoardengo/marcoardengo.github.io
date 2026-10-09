@@ -495,12 +495,32 @@ img {
   }
 
   .desktop-nav {
-    height: auto;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px 20px;
-  }
+  position: relative;
+  height: 48px;
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  flex-wrap: nowrap;
+  gap: 20px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.desktop-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.desktop-nav a {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
 
   .desktop-nav a {
     height: auto;
