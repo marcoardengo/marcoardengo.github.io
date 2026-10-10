@@ -195,11 +195,12 @@ img {
 }
 
 .hero-role {
-  margin-top: 12px;
+  margin-top: 14px;
   color: var(--navy-soft);
-  font-size: clamp(20px, 2vw, 28px);
+  font-size: clamp(15px, 1.4vw, 19px);
   font-weight: 400;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.015em;
+  line-height: 1.5;
 }
 
 .hero-description {
@@ -515,7 +516,7 @@ img {
   }
 
   .hero-role {
-    font-size: 22px;
+    font-size: 16px;
   }
 
   .hero-description {
@@ -594,8 +595,8 @@ img {
   }
 
   .hero-role {
-    margin-top: 8px;
-    font-size: 25px;
+    margin-top: 10px;
+    font-size: 18px;
   }
 
   .hero-description {
