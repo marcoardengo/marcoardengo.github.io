@@ -205,7 +205,7 @@ img {
 
 .hero-university {
   display: block;
-  margin-top: 6px;
+  margin-top: 8px;
 
   font-family: Georgia, "Times New Roman", serif;
   font-size: 18px;
@@ -214,6 +214,7 @@ img {
 
   color: var(--navy);
   letter-spacing: 0;
+  line-height: 1.5;
 }
 
 .hero-description {
