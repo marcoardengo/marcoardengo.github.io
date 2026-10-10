@@ -810,10 +810,10 @@ img {
 
 .footer-name {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(38px, 4.2vw, 64px);
+  font-size: clamp(32px, 3.2vw, 48px);
   font-weight: 700;
   letter-spacing: -0.055em;
-  line-height: 1.1;
+  line-height: 1.15;
   margin: 0;
   white-space: nowrap;
 }
@@ -891,7 +891,7 @@ img {
   }
 
   .footer-name {
-    font-size: clamp(36px, 7vw, 52px);
+    font-size: clamp(30px, 6vw, 40px);
     white-space: normal;
   }
 
