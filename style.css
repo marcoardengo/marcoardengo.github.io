@@ -412,11 +412,18 @@ img {
   background: var(--white);
 }
 
-.about-section .container > p:last-child {
-  max-width: 850px;
+/* ABOUT ME — ACADEMIC BIOGRAPHY */
+
+.about-section .container > p:not(.section-kicker) {
+  max-width: 900px;
+  margin-bottom: 20px;
   color: var(--muted);
-  font-size: 16px;
-  line-height: 1.9;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.about-section .container > p:last-child {
+  margin-bottom: 0;
 }
 
 
