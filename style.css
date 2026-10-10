@@ -793,7 +793,7 @@ img {
 .site-footer {
   background: var(--navy);
   color: #f7f5f0;
-  padding: 80px 40px 100px;
+  padding: 45px 40px 50px;
 }
 
 .footer-inner {
@@ -819,7 +819,7 @@ img {
 }
 
 .footer-description {
-  margin-top: 55px;
+  margin-top: 25px;
 }
 
 .footer-description p {
@@ -839,7 +839,7 @@ img {
 .footer-right {
   border-left: 1px solid rgba(247, 245, 240, 0.25);
   padding-left: 45px;
-  margin-top: 35px;
+  margin-top: 10px;
 }
 
 .footer-link {
@@ -882,12 +882,12 @@ img {
 @media (max-width: 900px) {
 
   .site-footer {
-    padding: 65px 25px 80px;
+    padding: 35px 25px 45px;
   }
 
   .footer-inner {
     grid-template-columns: 1fr;
-    gap: 45px;
+    gap: 25px;
   }
 
   .footer-name {
