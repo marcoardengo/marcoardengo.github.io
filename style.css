@@ -785,3 +785,134 @@ img {
 .desktop-nav .nav-link:hover::after {
   transform: scaleX(1);
 }
+
+/* ==========================================
+   ACADEMIC FOOTER
+   ========================================== */
+
+.site-footer {
+  background: var(--navy);
+  color: #f7f5f0;
+  padding: 80px 40px 100px;
+}
+
+.footer-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* LEFT COLUMN */
+
+.footer-name {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(48px, 6vw, 96px);
+  font-weight: 700;
+  letter-spacing: -0.07em;
+  line-height: 1;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.footer-description {
+  margin-top: 55px;
+}
+
+.footer-description p {
+  color: rgba(247, 245, 240, 0.58);
+  font-size: 18px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.footer-description .footer-location {
+  margin-top: 18px;
+  font-size: 15px;
+}
+
+/* RIGHT COLUMN */
+
+.footer-right {
+  border-left: 1px solid rgba(247, 245, 240, 0.25);
+  padding-left: 45px;
+  margin-top: 35px;
+}
+
+.footer-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  padding: 20px 0;
+
+  color: #f7f5f0;
+  text-decoration: none;
+  font-size: 19px;
+
+  border-bottom: 1px solid rgba(247, 245, 240, 0.25);
+
+  transition: color 0.3s ease;
+}
+
+.footer-link:last-child {
+  border-bottom: none;
+}
+
+.footer-link:hover {
+  color: #d8a0aa;
+}
+
+.footer-arrow {
+  font-size: 24px;
+  font-weight: 300;
+  transition: transform 0.3s ease;
+}
+
+.footer-link:hover .footer-arrow {
+  transform: translate(4px, -4px);
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  .site-footer {
+    padding: 65px 25px 80px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .footer-name {
+    font-size: clamp(40px, 9vw, 70px);
+    white-space: normal;
+  }
+
+  .footer-description {
+    margin-top: 30px;
+  }
+
+  .footer-description p {
+    font-size: 16px;
+  }
+
+  .footer-right {
+    margin-top: 0;
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid rgba(247, 245, 240, 0.25);
+    padding-top: 15px;
+  }
+
+  .footer-link {
+    font-size: 16px;
+  }
+
+}
