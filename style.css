@@ -203,6 +203,19 @@ img {
   line-height: 1.5;
 }
 
+.hero-university {
+  display: block;
+  margin-top: 6px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+
+  color: var(--navy);
+  letter-spacing: 0;
+}
+
 .hero-description {
   max-width: 570px;
   margin-top: 24px;
@@ -544,6 +557,10 @@ img {
     min-height: auto;
   }
 
+   .hero-university {
+  font-size: 16px;
+  margin-top: 5px;
+}
 
 
 
