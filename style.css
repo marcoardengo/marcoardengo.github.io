@@ -405,15 +405,16 @@ img {
 }
 
 /* ==========================================
-   ABOUT ME — ACADEMIC BIOGRAPHY
+   ABOUT ME — INSTITUTIONAL ACADEMIC LAYOUT
    ========================================== */
 
 .about-section {
   width: 100%;
   background: var(--white);
+  padding: 70px 40px;
 }
 
-/* Full-width biography container */
+/* Allineamento con Research & Interests */
 
 .about-section .container {
   width: 100%;
@@ -421,20 +422,32 @@ img {
   margin: 0 auto;
 }
 
-/* Biography paragraphs */
+/* Titolo */
+
+.about-section .section-kicker {
+  margin-bottom: 8px;
+}
+
+.about-section h2 {
+  margin-bottom: 32px;
+  font-size: 34px;
+  line-height: 1.2;
+}
+
+/* Biografia */
 
 .about-section .container > p:not(.section-kicker) {
   width: 100%;
   max-width: none;
 
-  margin-bottom: 24px;
+  margin: 0 0 22px;
 
-  color: var(--muted);
   font-family: "Inter", sans-serif;
   font-size: 15px;
   font-weight: 400;
-  line-height: 1.85;
+  line-height: 1.9;
 
+  color: var(--muted);
   text-align: left;
 }
 
@@ -442,7 +455,30 @@ img {
   margin-bottom: 0;
 }
 
+/* Mobile */
 
+@media (max-width: 760px) {
+
+  .about-section {
+    padding: 55px 24px;
+  }
+
+  .about-section .container {
+    max-width: 100%;
+  }
+
+  .about-section h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+
+  .about-section .container > p:not(.section-kicker) {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+  }
+
+}
 
 
 
