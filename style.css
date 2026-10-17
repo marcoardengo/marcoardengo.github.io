@@ -1078,3 +1078,54 @@ img {
   }
 
 }
+
+
+/* ==========================================
+   RESEARCH INTERESTS — SVG ICONS
+========================================== */
+
+.interest-icon svg {
+  display: block;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  stroke: currentColor;
+  transition: transform 0.25s ease;
+}
+
+/* Subtle hover animation */
+
+.interest-card:hover .interest-icon svg {
+  transform: scale(1.08);
+}
+
+/* ==========================================
+   RESEARCH INTERESTS — FIVE CARDS
+========================================== */
+
+/* The fifth card occupies both columns */
+
+@media (min-width: 769px) {
+
+  .interest-grid > .interest-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
+}
+
+/* ==========================================
+   RESEARCH INTERESTS — MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .interest-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .interest-grid > .interest-card:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+
+}
