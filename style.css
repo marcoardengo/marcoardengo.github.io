@@ -463,7 +463,97 @@ img {
   margin-bottom: 0;
 }
 
+/* ==========================================
+   ABOUT ME — TWO COLUMN LAYOUT
+========================================== */
 
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(220px, 1fr);
+  gap: 70px;
+  align-items: start;
+}
+
+/* TEXT COLUMN */
+
+.about-layout .about-content {
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+}
+
+/* CV COLUMN */
+
+.about-cv {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+/* DOWNLOAD CV BUTTON */
+
+.cv-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  padding: 15px 22px;
+  min-width: 190px;
+
+  background: var(--navy);
+  color: var(--cream);
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  border: 1px solid var(--navy);
+  border-radius: 4px;
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.cv-button:hover {
+  background: var(--red);
+  border-color: var(--red);
+  color: var(--cream);
+}
+
+.cv-button span {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* ==========================================
+   ABOUT ME — RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-cv {
+    justify-content: flex-start;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .cv-button {
+    min-width: 180px;
+    padding: 14px 20px;
+  }
+
+}
 
 
 
