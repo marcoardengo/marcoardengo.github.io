@@ -17,8 +17,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-  <!-- CSS -->
+    <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- FONT AWESOME ICONS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  >
+
+</head>
 
 </head>
 
@@ -298,193 +306,109 @@
   </main>
 
 
-/* ==========================================
-   ACADEMIC FOOTER — CONTACT
-========================================== */
+<!-- ==========================================
+     CONTACT & FOOTER
+========================================== -->
 
-.site-footer {
-  width: 100%;
-  background: var(--navy);
-  color: var(--cream);
-  padding: 65px 40px 30px;
-}
+<footer class="site-footer" id="contact">
 
-/* Same alignment as other sections */
+  <div class="container footer-container">
 
-.footer-container {
-  width: 100%;
-  max-width: var(--container);
-  margin: 0 auto;
-}
+    <div class="footer-main">
 
-/* Main footer layout */
+      <!-- LEFT COLUMN -->
 
-.footer-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-}
+      <div class="footer-left">
 
-/* LEFT COLUMN */
+        <p class="footer-kicker">GET IN TOUCH</p>
 
-.footer-left {
-  text-align: left;
-}
+        <h2>Contact</h2>
 
-.footer-kicker {
-  margin-bottom: 10px;
-  color: #d8a0aa;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-}
+        <div class="footer-locations">
+          <p>Milan, Italy</p>
+          <p>Venice, Italy</p>
+        </div>
 
-.footer-left h2 {
-  margin: 0 0 22px;
-  color: var(--cream);
-  font-size: clamp(32px, 3vw, 42px);
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 1.2;
-}
+      </div>
 
-.footer-locations p {
-  margin: 0 0 5px;
-  color: rgba(247, 245, 240, 0.7);
-  font-size: 15px;
-  line-height: 1.7;
-}
+      <!-- RIGHT COLUMN -->
 
-/* RIGHT COLUMN */
+      <div class="footer-right">
 
-.footer-right {
-  margin: 0;
-  padding: 0;
-  border: none;
+        <div class="footer-social">
 
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-}
+          <!-- EMAIL -->
+          <a
+            href="mailto:810746@stud.unive.it"
+            class="social-link"
+            aria-label="Email"
+            title="Email"
+          >
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          </a>
 
-/* Social icons */
+          <!-- LINKEDIN -->
+          <a
+            href="https://www.linkedin.com/in/marcoardengo/"
+            class="social-link"
+            aria-label="LinkedIn"
+            title="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+          </a>
 
-.footer-social {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 30px;
+          <!-- GITHUB -->
+          <a
+            href="https://github.com/marcoardengo"
+            class="social-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
 
-  padding-top: 48px;
-}
+          <!-- BLUESKY -->
+          <a
+            href="https://bsky.app/profile/marcoardengo.bsky.social"
+            class="social-link"
+            aria-label="Bluesky"
+            title="Bluesky"
+          >
+            <i class="fa-brands fa-bluesky" aria-hidden="true"></i>
+          </a>
 
-.social-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+          <!-- SUBSTACK -->
+          <a
+            href="#"
+            class="social-link"
+            aria-label="Substack"
+            title="Substack"
+          >
+            <i class="fa-solid fa-bookmark" aria-hidden="true"></i>
+          </a>
 
-  width: 38px;
-  height: 42px;
+        </div>
 
-  color: var(--cream);
-  font-size: 27px;
-  text-decoration: none;
+      </div>
 
-  transition:
-    color 0.25s ease,
-    transform 0.25s ease;
-}
+    </div>
 
-.social-link:hover {
-  color: #d8a0aa;
-  transform: translateY(-3px);
-}
+    <!-- COPYRIGHT -->
 
-.social-link:focus-visible {
-  outline: 2px solid var(--cream);
-  outline-offset: 5px;
-}
+    <div class="footer-bottom">
 
-/* COPYRIGHT */
+      <p>
+        © 2026 Marco Ardengo. All rights reserved.
+      </p>
 
-.footer-bottom {
-  margin-top: 65px;
-  padding-top: 22px;
-  border-top: 1px solid rgba(247, 245, 240, 0.25);
-}
+    </div>
 
-.footer-bottom p {
-  margin: 0;
-  color: rgba(247, 245, 240, 0.6);
-  font-size: 13px;
-  line-height: 1.6;
-}
+  </div>
 
-/* ==========================================
-   FOOTER — TABLET & MOBILE
-========================================== */
+</footer>
 
-@media (max-width: 900px) {
-
-  .site-footer {
-    padding: 50px 24px 25px;
-  }
-
-  .footer-main {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
-  .footer-right {
-    justify-content: flex-start;
-  }
-
-  .footer-social {
-    justify-content: flex-start;
-    gap: 25px;
-    padding-top: 0;
-  }
-
-  .social-link {
-    font-size: 25px;
-  }
-
-  .footer-bottom {
-    margin-top: 45px;
-  }
-
-}
-
-@media (max-width: 480px) {
-
-  .footer-left h2 {
-    font-size: 32px;
-  }
-
-  .footer-social {
-    gap: 18px;
-  }
-
-  .social-link {
-    width: 34px;
-    font-size: 23px;
-  }
-
-  .footer-locations p {
-    font-size: 14px;
-  }
-
-}
-
-
-  
-
-
-
-
-  
 
   <!-- JAVASCRIPT -->
 <script src="script.js" defer></script>
