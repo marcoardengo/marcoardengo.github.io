@@ -1129,3 +1129,111 @@ img {
   }
 
 }
+
+
+/* ==========================================
+   RESEARCH & INTERESTS — FIVE COLUMN LAYOUT
+========================================== */
+
+/* DESKTOP */
+
+@media (min-width: 1201px) {
+
+  .interest-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
+  }
+
+  /* All five cards have the same width */
+
+  .interest-grid > .interest-card {
+    grid-column: auto !important;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-width: 0;
+    min-height: 390px;
+
+    padding: 28px 22px;
+  }
+
+  /* Icons */
+
+  .interest-grid .interest-icon {
+    flex-shrink: 0;
+    margin-bottom: 24px;
+  }
+
+  /* Text container */
+
+  .interest-grid .interest-content {
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* Card headings */
+
+  .interest-grid .interest-content h3 {
+    font-size: 17px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    overflow-wrap: break-word;
+  }
+
+  /* Descriptions */
+
+  .interest-grid .interest-content p {
+    font-size: 13px;
+    line-height: 1.75;
+    overflow-wrap: break-word;
+  }
+
+}
+
+/* ==========================================
+   RESEARCH — TABLET
+========================================== */
+
+@media (min-width: 769px) and (max-width: 1200px) {
+
+  .interest-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .interest-grid > .interest-card {
+    grid-column: auto !important;
+    min-width: 0;
+    min-height: 0;
+  }
+
+  .interest-grid > .interest-card:last-child {
+    grid-column: 1 / -1 !important;
+  }
+
+}
+
+/* ==========================================
+   RESEARCH — MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .interest-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .interest-grid > .interest-card {
+    grid-column: auto !important;
+    min-width: 0;
+    min-height: 0;
+  }
+
+}
