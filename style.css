@@ -404,56 +404,69 @@ img {
   font-size: 14px;
 }
 
+
 /* ==========================================
-   ABOUT ME — INSTITUTIONAL ACADEMIC LAYOUT
+   ABOUT ME — ACADEMIC LAYOUT
    ========================================== */
 
 .about-section {
-  width: 100%;
   background: var(--white);
-  padding: 70px 40px;
 }
 
-/* Allineamento con Research & Interests */
+/* Main container */
 
-.about-section .container {
+.about-section .about-container {
   width: 100%;
   max-width: var(--container);
   margin: 0 auto;
+
+  display: block;
 }
 
-/* Titolo */
+/* Heading */
 
-.about-section .section-kicker {
+.about-heading {
+  margin-bottom: 32px;
+}
+
+.about-heading .section-kicker {
   margin-bottom: 8px;
 }
 
-.about-section h2 {
-  margin-bottom: 32px;
-  font-size: 34px;
-  line-height: 1.2;
+.about-heading h2 {
+  margin-bottom: 0;
 }
 
-/* Biografia */
+/* Biography */
 
-.about-section .container > p:not(.section-kicker) {
+.about-content {
+  width: 100%;
+  max-width: none;
+}
+
+.about-content p {
   width: 100%;
   max-width: none;
 
-  margin: 0 0 22px;
+  margin: 0 0 24px;
 
   font-family: "Inter", sans-serif;
   font-size: 15px;
   font-weight: 400;
-  line-height: 1.9;
+  line-height: 1.85;
 
   color: var(--muted);
   text-align: left;
 }
 
-.about-section .container > p:last-child {
+.about-content p:last-child {
   margin-bottom: 0;
 }
+
+
+
+
+
 
 /* Mobile */
 
