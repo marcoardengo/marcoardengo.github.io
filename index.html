@@ -298,53 +298,188 @@
   </main>
 
 
-  <!-- FOOTER -->
-<footer class="site-footer" id="contact">
+/* ==========================================
+   ACADEMIC FOOTER — CONTACT
+========================================== */
 
-  <div class="footer-inner">
+.site-footer {
+  width: 100%;
+  background: var(--navy);
+  color: var(--cream);
+  padding: 65px 40px 30px;
+}
 
-    <!-- LEFT COLUMN -->
-    <div class="footer-left">
+/* Same alignment as other sections */
 
-      <h2 class="footer-name">Marco Ardengo</h2>
+.footer-container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+}
 
-      <div class="footer-description">
-        <p>Economics &amp; Business Student</p>
-        <p>Interested in Economics, Finance &amp; Public Policy</p>
-        <p class="footer-location">Milan / Venice / London</p>
-      </div>
+/* Main footer layout */
 
-    </div>
+.footer-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
 
-    <!-- RIGHT COLUMN -->
-    <div class="footer-right">
+/* LEFT COLUMN */
 
-      <a href="mailto:marcoardengo.economics@gmail.com" class="footer-link">
-        <span>E-Mail</span>
-        <span class="footer-arrow" aria-hidden="true">↗</span>
-      </a>
+.footer-left {
+  text-align: left;
+}
 
-      <a href="https://www.linkedin.com/in/marcoardengo/" 
-         target="_blank"
-         rel="noopener noreferrer"
-         class="footer-link">
-        <span>LinkedIn</span>
-        <span class="footer-arrow" aria-hidden="true">↗</span>
-      </a>
+.footer-kicker {
+  margin-bottom: 10px;
+  color: #d8a0aa;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
 
-      <a href="https://github.com/marcoardengo"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="footer-link">
-        <span>GitHub</span>
-        <span class="footer-arrow" aria-hidden="true">↗</span>
-      </a>
+.footer-left h2 {
+  margin: 0 0 22px;
+  color: var(--cream);
+  font-size: clamp(32px, 3vw, 42px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+}
 
-    </div>
+.footer-locations p {
+  margin: 0 0 5px;
+  color: rgba(247, 245, 240, 0.7);
+  font-size: 15px;
+  line-height: 1.7;
+}
 
-  </div>
+/* RIGHT COLUMN */
 
-</footer>
+.footer-right {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+/* Social icons */
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  padding-top: 48px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 42px;
+
+  color: var(--cream);
+  font-size: 27px;
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.social-link:hover {
+  color: #d8a0aa;
+  transform: translateY(-3px);
+}
+
+.social-link:focus-visible {
+  outline: 2px solid var(--cream);
+  outline-offset: 5px;
+}
+
+/* COPYRIGHT */
+
+.footer-bottom {
+  margin-top: 65px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(247, 245, 240, 0.25);
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: rgba(247, 245, 240, 0.6);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   FOOTER — TABLET & MOBILE
+========================================== */
+
+@media (max-width: 900px) {
+
+  .site-footer {
+    padding: 50px 24px 25px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .footer-right {
+    justify-content: flex-start;
+  }
+
+  .footer-social {
+    justify-content: flex-start;
+    gap: 25px;
+    padding-top: 0;
+  }
+
+  .social-link {
+    font-size: 25px;
+  }
+
+  .footer-bottom {
+    margin-top: 45px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .footer-left h2 {
+    font-size: 32px;
+  }
+
+  .footer-social {
+    gap: 18px;
+  }
+
+  .social-link {
+    width: 34px;
+    font-size: 23px;
+  }
+
+  .footer-locations p {
+    font-size: 14px;
+  }
+
+}
+
+
+  
 
 
 
