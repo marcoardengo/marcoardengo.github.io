@@ -1444,3 +1444,27 @@ img {
 .footer-legal a:hover {
   color: var(--champagne);
 }
+
+@media (max-width: 760px) {
+
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .footer-bottom p {
+    font-size: 11px;
+  }
+
+  .footer-legal {
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  .footer-legal a {
+    font-size: 11px;
+  }
+
+}
