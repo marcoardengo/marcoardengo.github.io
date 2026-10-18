@@ -1326,6 +1326,69 @@ img {
   margin-bottom: 18px;
 }
 
+/* ==========================================
+   LEGAL CONTENT — SUBHEADINGS
+========================================== */
+
+.legal-content h3 {
+  color: var(--navy);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+
+
+/* ==========================================
+   LEGAL CONTENT — LISTS
+========================================== */
+
+.legal-content ul {
+  margin: 15px 0 22px;
+  padding-left: 24px;
+}
+
+.legal-content li {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.85;
+  margin-bottom: 8px;
+}
+
+.legal-content li::marker {
+  color: var(--red);
+}
+
+
+/* ==========================================
+   LEGAL CONTENT — STRONG TEXT
+========================================== */
+
+.legal-content strong {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+
+/* ==========================================
+   LEGAL CONTENT — RESPONSIVE
+========================================== */
+
+@media (max-width: 760px) {
+
+  .legal-content h3 {
+    font-size: 15px;
+  }
+
+  .legal-content li {
+    font-size: 14px;
+  }
+
+}
+
+
 .legal-content p {
   color: var(--muted);
   font-size: 15px;
