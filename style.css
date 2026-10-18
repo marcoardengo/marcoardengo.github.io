@@ -808,7 +808,7 @@ img {
 
 .research-section {
   padding-top: 35px;
-  padding-bottom: 25px;
+  padding-bottom: 80px;
   background: var(--cream);
 }
 
@@ -886,7 +886,7 @@ img {
 @media (max-width: 760px) {
 
   .research-section {
-    padding: 35px 24px;
+    padding: 35px 24px 65px;
   }
 
   .interest-grid {
