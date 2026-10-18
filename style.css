@@ -5,6 +5,7 @@
 :root {
   --cream: #f7f5f0;
   --white: #ffffff;
+  --champagne: hsl(38 33% 57%);
   --navy: #071d33;
   --navy-soft: #102b46;
   --red: #c8102e;
@@ -1234,6 +1235,184 @@ img {
     grid-column: auto !important;
     min-width: 0;
     min-height: 0;
+  }
+
+}
+
+
+/* ==========================================
+   FOOTER — UPDATED DESIGN
+========================================== */
+
+/* MAIN FOOTER */
+
+.site-footer {
+  background-color: var(--navy);
+  color: var(--cream);
+}
+
+
+/* ==========================================
+   LEFT COLUMN
+========================================== */
+
+/* GET IN TOUCH */
+
+.footer-kicker {
+  color: var(--champagne);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+
+/* CONTACT TITLE */
+
+.footer-left h2 {
+  color: var(--cream);
+  margin-bottom: 24px;
+}
+
+
+/* LOCATION */
+
+.footer-location {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-location .location-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+
+  color: var(--red);
+  stroke: currentColor;
+  fill: none;
+
+  flex-shrink: 0;
+}
+
+.footer-location span {
+  color: var(--cream);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* ==========================================
+   RIGHT COLUMN
+========================================== */
+
+/* SOCIAL COLUMN */
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+
+/* FOLLOW ME ON */
+
+.footer-social-title {
+  color: var(--champagne);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 24px;
+}
+
+
+/* SOCIAL ICONS CONTAINER */
+
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+
+/* SOCIAL ICON BUTTONS */
+
+.footer-social .social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  color: var(--cream);
+  background-color: transparent;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+
+  text-decoration: none;
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* FONT AWESOME ICONS */
+
+.footer-social .social-link i {
+  font-size: 19px;
+}
+
+
+/* SVG ICONS */
+
+.footer-social .social-link svg {
+  display: block;
+  width: 19px;
+  height: 19px;
+  fill: currentColor;
+}
+
+
+/* SAND HOVER EFFECT */
+
+.footer-social .social-link:hover,
+.footer-social .social-link:focus-visible {
+  background-color: var(--champagne);
+  border-color: var(--champagne);
+  color: var(--navy);
+
+  transform: translateY(-3px);
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .footer-right {
+    align-items: flex-start;
+  }
+
+  .footer-social {
+    justify-content: flex-start;
+  }
+
+  .footer-social-title {
+    margin-bottom: 18px;
+  }
+
+  .footer-location {
+    align-items: flex-start;
   }
 
 }
